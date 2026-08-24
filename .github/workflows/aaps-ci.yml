@@ -263,6 +263,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
+      - name: Checkout repository for index.html
+        uses: actions/checkout@v5
+      
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
